@@ -27,4 +27,4 @@ jobs:
         pip install -r requirements/base.txt -r requirements/test.txt -r requirements/dev.txt
     - name: Run Tests
       run: |
-        python manage.py test
+        python spongeauth/manage.py test
