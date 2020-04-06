@@ -17,6 +17,12 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+    - name: Cache Packages
+      id: cache-npm
+      uses: actions/cache@v1
+      with:
+        path: .npm
+        key: ${{ runner.os }}-npm
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
